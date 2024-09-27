@@ -1,0 +1,5 @@
+name: "My code scanning CodeQL config"
+
+queries-filter:
+  - exclude:
+      id: cpp/autosar/identical-lambda-expressions
