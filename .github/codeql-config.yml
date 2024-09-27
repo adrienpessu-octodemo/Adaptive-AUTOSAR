@@ -7,4 +7,5 @@ packs:
 
 query-filters:
   - exclude:
-    tags: external/autosar/id/a5-1-9
+      id: 
+        - cpp/autosar/identical-lambda-expressions
