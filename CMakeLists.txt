@@ -482,10 +482,90 @@ if(build_tests)
 
   add_executable(
     arxml_unit_test
+    ${test_arxml_dir}/arxml_node_test.cpp
+    ${test_arxml_dir}/arxml_reader_test.cpp
   )
 
   add_executable(
     ara_unit_test
+    ${test_ara_log_dir}/argument_test.cpp
+    ${test_ara_log_dir}/log_stream_test.cpp
+    ${test_ara_log_dir}/logger_test.cpp
+    ${test_ara_log_dir}/logging_framework_test.cpp
+    ${test_ara_sm_dir}/trigger_in_test.cpp
+    ${test_ara_sm_dir}/trigger_out_test.cpp
+    ${test_ara_sm_dir}/trigger_inout_test.cpp
+    ${test_ara_sm_dir}/power_mode_test.cpp
+    ${test_ara_com_e2e_dir}/profile11_test.cpp
+    ${test_ara_com_entry_dir}/eventgroup_entry_test.cpp
+    ${test_ara_com_entry_dir}/service_entry_test.cpp
+    ${test_ara_com_helper_dir}/ipv4_address_test.cpp
+    ${test_ara_com_helper_dir}/mockup_network_layer.h
+    ${test_ara_com_helper_dir}/ttl_timer_test.cpp
+    ${test_ara_com_helper_dir}/concurrent_queue_test.cpp
+    ${test_ara_com_option_dir}/ipv4_endpoint_option_test.cpp
+    ${test_ara_com_option_dir}/loadbalancing_option_test.cpp
+    ${test_ara_com_someip_pubsub_dir}/someip_pubsub_test.cpp
+    ${test_ara_com_someip_pubsub_fsm_dir}/pubsub_state_test.cpp
+    ${test_ara_com_someip_rpc_dir}/someip_rpc_message_test.cpp
+    ${test_ara_com_someip_rpc_dir}/rpc_server_test.cpp
+    ${test_ara_com_someip_rpc_dir}/rpc_client_test.cpp
+    ${test_ara_com_someip_sd_dir}/someip_sd_message_test.cpp
+    ${test_ara_com_someip_sd_dir}/network_abstraction_test.cpp
+    ${test_ara_com_someip_sd_dir}/someip_sd_test.cpp
+    ${test_ara_com_someip_sd_fsm_dir}/machine_state_test.cpp
+    ${test_ara_exec_dir}/worker_thread_test.cpp
+    ${test_ara_exec_dir}/worker_runnable_test.cpp
+    ${test_ara_exec_dir}/deterministic_client_test.cpp
+    ${test_ara_exec_dir}/execution_client_test.cpp
+    ${test_ara_exec_dir}/execution_server_test.cpp
+    ${test_ara_exec_dir}/function_group_test.cpp
+    ${test_ara_exec_dir}/function_group_state_test.cpp
+    ${test_ara_exec_dir}/exec_exception_test.cpp
+    ${test_ara_exec_dir}/state_client_test.cpp
+    ${test_ara_exec_dir}/state_server_test.cpp
+    ${test_ara_exec_helper_dir}/atomic_optional_test.cpp
+    ${test_ara_exec_helper_dir}/mock_rpc_client.h
+    ${test_ara_exec_helper_dir}/mock_rpc_server.h
+    ${test_ara_exec_helper_dir}/modelled_process_test.cpp
+    ${test_ara_core_dir}/optional_test.cpp
+    ${test_ara_core_dir}/result_test.cpp
+    ${test_ara_core_dir}/result_void_test.cpp
+    ${test_ara_core_dir}/error_domain_test.cpp
+    ${test_ara_core_dir}/error_code_test.cpp
+    ${test_ara_core_dir}/instance_specifier_test.cpp
+    ${test_ara_diag_dir}/obd_communication_test.cpp
+    ${test_ara_diag_dir}/meta_info_test.cpp
+    ${test_ara_diag_dir}/cancellation_handler_test.cpp
+    ${test_ara_diag_dir}/event_test.cpp
+    ${test_ara_diag_dir}/dtc_information_test.cpp
+    ${test_ara_diag_dir}/condition_test.cpp
+    ${test_ara_diag_dir}/operation_cycle_test.cpp
+    ${test_ara_diag_dir}/conversation_test.cpp
+    ${test_ara_diag_dir}/diag_error_domain_test.cpp
+    ${test_ara_diag_dir}/generic_uds_service_test.cpp
+    ${test_ara_diag_dir}/security_access_test.cpp
+    ${test_ara_diag_dir}/ecu_reset_request_test.cpp
+    ${test_ara_diag_dir}/generic_routine_test.cpp
+    ${test_ara_diag_dir}/monitor_test.cpp
+    ${test_ara_diag_dir}/doip_lib_test.cpp
+    ${test_ara_diag_routing_dir}/testable_uds_service.h
+    ${test_ara_diag_routing_dir}/uds_service_router_test.cpp
+    ${test_ara_diag_routing_dir}/delay_timer_test.cpp
+    ${test_ara_diag_routing_dir}/transfer_data_test.cpp
+    ${test_ara_diag_routing_dir}/request_transfer_exit_test.cpp
+    ${test_ara_diag_routing_dir}/nrc_exception_test.cpp
+    ${test_ara_diag_routing_dir}/request_transfer_test.cpp
+    ${test_ara_diag_debouncing_dir}/counter_based_debouncer_test.cpp
+    ${test_ara_diag_debouncing_dir}/timer_based_debouncer_test.cpp
+    ${test_ara_phm_dir}/recovery_action_test.cpp
+    ${test_ara_phm_dir}/mocked_checkpoint_communicator.h
+    ${test_ara_phm_dir}/supervised_entity_test.cpp
+    ${test_ara_phm_supervisors_dir}/dummy_supervision.h
+    ${test_ara_phm_supervisors_dir}/elementary_supervision_test.cpp
+    ${test_ara_phm_supervisors_dir}/alive_supervision_test.cpp
+    ${test_ara_phm_supervisors_dir}/deadline_supervision_test.cpp
+    ${test_ara_phm_supervisors_dir}/global_supervision_test.cpp
   )
 
   target_link_libraries(
