@@ -2,7 +2,7 @@ name: "My code scanning CodeQL config"
 
 disable-default-queries: true
 
-queries:
+packs:
   - advanced-security/autosar-cpp-coding-standards-uncertified
 
 queries-filter:
