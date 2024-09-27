@@ -5,8 +5,6 @@ disable-default-queries: true
 packs:
   - advanced-security/autosar-cpp-coding-standards-uncertified
 
-query-filters::
+query-filters:
   - exclude:
     id: cpp/autosar/identical-lambda-expressions
-  - exclude:
-    id: cpp/autosar/lambda-expression-in-lambda-expression
