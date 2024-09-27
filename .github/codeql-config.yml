@@ -1,5 +1,13 @@
 name: "My code scanning CodeQL config"
 
+disable-default-queries: true
+
+queries:
+  - name: Use an external JavaScript CodeQL pack (run queries from an external repo)
+    uses: +advanced-security/autosar-cpp-coding-standards-uncertified@main
+
 queries-filter:
   - exclude:
-      id: cpp/autosar/identical-lambda-expressions
+    id: cpp/autosar/identical-lambda-expressions
+  - exclude:
+    id: cpp/autosar/lambda-expression-in-lambda-expression
