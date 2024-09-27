@@ -151,67 +151,7 @@ set(source_application_helper_dir
 set(source_application_platform_dir
   "${CMAKE_SOURCE_DIR}/src/application/platform")
 
-# Test Directories:
 
-set(test_arxml_dir
-  "${CMAKE_SOURCE_DIR}/test/arxml")
-
-set(test_ara_core_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/core")
-
-set(test_ara_log_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/log")
-
-set(test_ara_sm_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/sm")
-
-set(test_ara_com_e2e_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/e2e")
-
-set(test_ara_com_entry_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/entry")
-
-set(test_ara_com_helper_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/helper")
-
-set(test_ara_com_option_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/option")
-
-set(test_ara_com_someip_pubsub_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/someip/pubsub")
-
-set(test_ara_com_someip_pubsub_fsm_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/someip/pubsub/fsm")
-
-set(test_ara_com_someip_rpc_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/someip/rpc")
-
-set(test_ara_com_someip_sd_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/someip/sd")
-
-set(test_ara_com_someip_sd_fsm_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/com/someip/sd/fsm")
-
-set(test_ara_exec_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/exec")
-
-set(test_ara_exec_helper_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/exec/helper")
-
-set(test_ara_diag_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/diag")
-
-set(test_ara_diag_routing_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/diag/routing")
-
-set(test_ara_diag_debouncing_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/diag/debouncing")
-
-set(test_ara_phm_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/phm")
-
-set(test_ara_phm_supervisors_dir
-  "${CMAKE_SOURCE_DIR}/test/ara/phm/supervisors")
 
 ########################################################################
 
