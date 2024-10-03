@@ -1,0 +1,5 @@
+guideline-recategorizations:
+  - rule-id: "A5-2-1"
+    category: "mandatory"
+  - rule-id: "A14-5-3"
+    category: "mandatory"
