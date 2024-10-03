@@ -37,13 +37,13 @@ jobs:
       uses: github/codeql-action/analyze@v3
       with:
         upload: false
-        output: sarif-results
+        category: "/language:${{matrix.language}}"
 
     - name: Edit tags
       uses: adrienpessu/sarif-tags-editor@main
       with:
-        sarif-file-source: sarif-results/${{matrix.language}}.sarif
-        sarif-file-destination: sarif-results/${{matrix.language}}-edited.sarif
+        sarif-file-source: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
+        sarif-file-destination: ${{ runner.workspace }}/results/${{matrix.language}}-edited.sarif
         filters-tags: external/autosar/id/a13-5-3,external/autosar/id/a14-5-3,external/autosar/id/a5-2-1 
         add-tags: external/autosar/obligation/required
         remove-tags: external/autosar/obligation/advisory
