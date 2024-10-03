@@ -27,7 +27,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        config-file: ./.github/codeql-config.yml
+        packs: +advanced-security/autosar-cpp-coding-standards-uncertified@2.35.2
         source-root: ./src
 
     - name: Autobuild
@@ -40,7 +40,7 @@ jobs:
         category: "/language:${{matrix.language}}"
 
     - name: Edit tags
-      uses: adrienpessu/sarif-tags-editor@main
+      uses: adrienpessu/sarif-tags-editor@v1
       with:
         sarif-file-source: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
         sarif-file-destination: ${{ runner.workspace }}/results/${{matrix.language}}-edited.sarif
