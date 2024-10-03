@@ -27,7 +27,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        packs: +advanced-security/autosar-cpp-coding-standards-uncertified@2.35.1
+        config-file: ./.github/codeql-config.yml
         source-root: ./src
 
     - name: Autobuild
@@ -35,3 +35,8 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
+
+    - name: Upload Artifacts to Workflow
+      uses: actions/upload-artifact@v3
+      with:     
+        path: ${{ runner.workspace }}/results/*.sarif
