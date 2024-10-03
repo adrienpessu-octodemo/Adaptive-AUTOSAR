@@ -51,9 +51,9 @@ jobs:
     - name: Upload SARIF
       uses: github/codeql-action/upload-sarif@v2
       with:
-        sarif_file: sarif-results/${{matrix.language}}-edited.sarif
+        sarif_file: ${{ runner.workspace }}/results/${{matrix.language}}-edited.sarif
     
     - name: Upload Artifacts to Workflow
       uses: actions/upload-artifact@v3
       with:     
-        path: sarif-results/${{matrix.language}}.sarif
+        path: ${{ runner.workspace }}/results/${{matrix.language}}-edited.sarif
