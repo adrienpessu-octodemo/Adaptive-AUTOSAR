@@ -28,16 +28,25 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         config-file: ./.github/codeql-config.yml
-        source-root: ./src
 
     - name: Autobuild
       uses: github/codeql-action/autobuild@v3
+      with:
+        working-directory: src
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
         upload: false
         category: "/language:${{matrix.language}}"
+
+    - name: filter-sarif
+      uses: advanced-security/filter-sarif@v1
+      with:
+        patterns: |
+          +**/profile11.cpp
+        input: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
+        output: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
 
     - name: Edit tags
       uses: adrienpessu/sarif-tags-editor@v1
