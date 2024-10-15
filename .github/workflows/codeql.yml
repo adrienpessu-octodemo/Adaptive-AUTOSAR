@@ -47,6 +47,7 @@ jobs:
       with:
         patterns: |
           +**/profile11.cpp
+          -build/**/*.*
         input: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
         output: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
 
