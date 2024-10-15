@@ -67,4 +67,4 @@ jobs:
     - name: Upload Artifacts to Workflow
       uses: actions/upload-artifact@v3
       with:     
-        path: ${{ runner.workspace }}/results/${{matrix.language}}-edited.sarif
+        path: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
