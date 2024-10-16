@@ -29,10 +29,10 @@ jobs:
         languages: ${{ matrix.language }}
         config-file: ./.github/codeql-config.yml
 
-    - run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -Dbuild_tests=OFF
+    # - run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=Release -Dbuild_tests=OFF
 
-    # - name: Autobuild
-    #   uses: github/codeql-action/autobuild@v3
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
