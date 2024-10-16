@@ -50,7 +50,7 @@ jobs:
           -_codeql_build_dir/**/*.*
           -build/**/*.*
         input: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
-        output: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
+        output: ${{ runner.workspace }}/results/${{matrix.language}}-filtered.sarif
 
     # - name: Edit tags
     #   uses: adrienpessu/sarif-tags-editor@v1
@@ -64,9 +64,9 @@ jobs:
     - name: Upload SARIF
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
+        sarif_file: ${{ runner.workspace }}/results/${{matrix.language}}-filtered.sarif
     
     - name: Upload Artifacts to Workflow
       uses: actions/upload-artifact@v3
       with:     
-        path: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
+        path: ${{ runner.workspace }}/results/${{matrix.language}}-filtered.sarif
