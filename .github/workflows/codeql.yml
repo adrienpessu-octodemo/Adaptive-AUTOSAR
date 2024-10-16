@@ -8,7 +8,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ubuntu-larger
+    runs-on: ubuntu-latest
     permissions:
       actions: read
       contents: read
@@ -29,12 +29,10 @@ jobs:
         languages: ${{ matrix.language }}
         config-file: ./.github/codeql-config.yml
 
-    # - run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dbuild_tests=OFF
+    - run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -Dbuild_tests=OFF
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
-    #   with:
-    #     working-directory: src
+    # - name: Autobuild
+    #   uses: github/codeql-action/autobuild@v3
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
