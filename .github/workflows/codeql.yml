@@ -47,7 +47,7 @@ jobs:
       with:
         patterns: |
           -**/*
-          +src/ara/**/*
+          +src/ara/com/e2e/**/*
           -_codeql_build_dir/**/*
         input: ${{ runner.workspace }}/results/${{matrix.language}}.sarif
         output: ${{ runner.workspace }}/results/${{matrix.language}}-filtered.sarif
