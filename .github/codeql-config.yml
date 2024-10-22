@@ -9,24 +9,26 @@ query-filters:
   - exclude:
       id: 
         - cpp/autosar/identical-lambda-expressions
-      tags: 
-        - external/autosar/id/m0-1-8
-        - external/autosar/id/a6-5-2
-        - external/autosar/id/m0-1-10
-        - external/autosar/id/m16-3-2
-        - external/autosar/id/m11-0-1
-        - external/autosar/id/m9-3-3
-        - external/autosar/id/a0-1-6
-        - external/autosar/id/a3-9-1
-        - external/autosar/id/a5-2-1
-        - external/autosar/id/a8-4-3
-        - external/autosar/id/a8-4-4
-        - external/autosar/id/a8-4-14
-        - external/autosar/id/a8-5-4
-        - external/autosar/id/a10-4-1
-        - external/autosar/id/a12-0-1
-        - external/autosar/id/a12-1-3
-        - external/autosar/id/a12-6-1
-        - external/autosar/id/a13-1-2
-        - external/autosar/id/a14-5-3
-        - external/autosar/id/a16-0-1
+        - cpp/autosar/functions-with-void-return-type-shall-have-external-side-effects
+        - cpp/autosar/floating-point-loop-counter
+        - cpp/autosar/multiple-loop-counters
+        - cpp/autosar/unused-function
+        - cpp/autosar/unused-spl-member-function
+        - cpp/autosar/hash-operators-should-not-be-used
+        - cpp/autosar/member-data-in-non-pod-class-types-not-private
+        - cpp/autosar/member-function-static-if-possible
+        - cpp/autosar/member-function-const-if-possible
+        - cpp/autosar/unused-type-declarations
+        - cpp/guideline-recategorizations/disapplied-query
+        - cpp/autosar/variable-width-integer-types-used
+        - cpp/autosar/variable-width-plain-char-type-used
+        - cpp/autosar/dynamic-cast-should-not-be-used
+        - cpp/autosar/function-return-multiple-value-condition
+        - cpp/autosar/confusing-use-of-initializer-list-constructors
+        - cpp/autosar/hierarchies-should-be-based-on-interface-classes
+        - cpp/autosar/missing-special-member-function
+        - cpp/autosar/missed-nsdmi-opportunity
+        - cpp/autosar/class-data-members-initialization-condition
+        - cpp/autosar/user-defined-literal-operator-suffix-violation
+        - cpp/autosar/non-member-generic-operator-condition
+        - cpp/autosar/pre-processor-shall-only-be-used-for-certain-directives-patterns
